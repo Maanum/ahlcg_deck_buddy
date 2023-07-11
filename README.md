@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# Arkham Horror LCG Deck Buddy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An exploration in using LLMs (chatGPT) to assist in the deckbuilding process for the [Arkham Horror Living Card Game](https://en.wikipedia.org/wiki/Arkham_Horror:_The_Card_Game).
+
+Plan:
+1. Comment on existing deck (from [ArkhamDB](https://arkhamdb.com/))
+2. Interactive "suggest a deck"
+3. Integration to ArkhamDB to automatically register changes
+
+---
+_"create react app" boilerplate text_
 
 ## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
