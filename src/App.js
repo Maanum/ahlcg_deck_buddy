@@ -1,22 +1,46 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from "react"
 import './App.css';
 
-function App() {
+const App = () => {
+  const [deck, setDeck] = useState([])
+  let deckId = '';
+  let url = '';
+  let cardList = '';
+
+
+
+  useEffect(() => {
+    const fetchDeckData = () => {
+      deckId = 3028414;
+      url = `https://arkhamdb.com/api/public/deck/${deckId}`
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          cardList = {};
+          Object.keys(data.slots).forEach((key) => {
+            fetch(`https://arkhamdb.com/api/public/card/${key}`)
+              .then(response => response.json())
+              .then(data => {
+                cardList[data.name] = data.slots[key]
+              })
+          });
+          return "data";
+        })
+        .then(data => {
+          setDeck(data)
+        })
+    }
+
+    fetchDeckData()
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {deck}
+          {/* {JSON.string?ify(deck)} */}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
