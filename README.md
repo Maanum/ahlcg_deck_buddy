@@ -2,75 +2,34 @@
 
 An exploration in using LLMs (chatGPT) to assist in the deckbuilding process for the [Arkham Horror Living Card Game](https://en.wikipedia.org/wiki/Arkham_Horror:_The_Card_Game).
 
-Plan:
-1. Comment on existing deck (from [ArkhamDB](https://arkhamdb.com/))
-2. Interactive "suggest a deck"
-3. Integration to ArkhamDB to automatically register changes
+## Plan
 
----
-_"create react app" boilerplate text_
+### v1: Comment on existing deck (from [ArkhamDB](https://arkhamdb.com/))
 
-## Available Scripts
+- [x] Create basic layout in frontend
+- [x] Hook up Deck Import fetch
+- [x] Create backend and hook up end-to-end ChatGPT API interaction
+- [x] Figure out initial ChatGPT prompt
+- [] Hi-fi mock for Frontend (Figma)
+- [] Implement design in FE
+- [] Deploy App
+- [] General code refactor / cleanup (move ArkhamDB API interaction to BE?)
 
-### `npm start`
+### v2: Allow ChatGPT to edit `deck` in App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [] Figure out how to have ChatGPT API register deck checkes (see [here](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353/8))
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### v3: Integration to ArkhamDB to automatically register changes
 
-### `npm test`
+- [] Implement OAuth2 delegation request flow for CRUD ops on ArkhamDB API
+- [] Request access to Kamalisk to register the App with ArkhamDB
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Misc
 
-### `npm run build`
+- [] Explore other `roles` for ChatGPT API, especially `system` (see [here](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353))
+- [] Look into more involved ChatGPT API flow for better responses (see [here](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353/28))
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Thanks
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Kamalisk](https://github.com/Kamalisk), for maintaining [ArkhamDB](https://arkhamdb.com/)
+- [KrytenKoro](https://arkhamhorrorfiles.fandom.com/wiki/Special:Contributions/KrytenKoro), for uploading the autofail favicon to arkhamhorrorfiles.fandom.com

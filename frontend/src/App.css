@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  height: 100vh; /* make app full height */
+}
+
+.deck-section,
+.chat-section {
+  padding: 1em;
+  overflow-y: auto; /* add scroll if content overflows */
+  width: 50%; /* deck info takes 50% of width */
+}
+
+.deck-info {
+  border-right: 1px solid #ddd;
+}
+
+.deck-input {
+  height: 20%; /* chat input takes 20% of height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chat-history {
+  height: 80%; /* chat history takes 80% of height */
+  align-self: flex-end;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-input {
+  height: 20%; /* chat input takes 20% of height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
