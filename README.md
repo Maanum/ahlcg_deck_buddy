@@ -2,6 +2,26 @@
 
 An exploration in using LLMs (chatGPT) to assist in the deckbuilding process for the [Arkham Horror Living Card Game](https://en.wikipedia.org/wiki/Arkham_Horror:_The_Card_Game).
 
+## (Current) Usage
+
+Backend and frontend are in their own directories and ran separately. Currently everything only works locally
+
+### Backend
+
+1. Ensure you have a `./backend/.env.development.local` file with the following vars defined:
+
+```
+OPENAI_API_KEY=
+BACKEND_PORT=
+```
+
+2. Run `npm start:dev:local` from `./backend`
+
+### Frontend
+
+1. Run `npm start` from `./frontend`
+2. Navigate to http://localhost:3000
+
 ## Plan
 
 ### v1: Comment on existing deck (from [ArkhamDB](https://arkhamdb.com/))
@@ -17,7 +37,7 @@ An exploration in using LLMs (chatGPT) to assist in the deckbuilding process for
 
 ### v2: Allow ChatGPT to edit `deck` in App
 
-- [ ] Figure out how to have ChatGPT API register deck checkes (see [here](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353/8))
+- [ ] Figure out how to have ChatGPT API register deck changes (see [here](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353/8))
 
 ### v3: Integration to ArkhamDB to automatically register changes
 
