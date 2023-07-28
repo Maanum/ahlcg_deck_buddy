@@ -24,6 +24,10 @@ An exploration in using LLMs (chatGPT) to assist in the deckbuilding process for
 - [ ] Implement OAuth2 delegation request flow for CRUD ops on ArkhamDB API
 - [ ] Request access to Kamalisk to register the App with ArkhamDB
 
+### v4: Add Personas to the chatbot(?)
+
+_e.g. investigators, Great Old Ones, etc..._
+
 ### Misc
 
 - [ ] Explore other `roles` for ChatGPT API, especially `system` (see [here](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353))
